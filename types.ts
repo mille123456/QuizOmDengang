@@ -1,2 +1,0 @@
-export type Quiz={id:string;title:string;description:string;category:string;subcategory?:string;period:string;difficulty:"Let"|"Middel"|"Svær";quiz_type?:string;is_daily?:boolean;is_weekly?:boolean;questions?:Question[]};
-export type Question={id:string;quiz_id:string;question:string;answer_a:string;answer_b:string;answer_c:string;answer_d:string;correct_answer:"A"|"B"|"C"|"D";explanation:string;source?:string;source_date?:string;newspaper?:string;newspaper_date?:string;page?:string;sort_order:number};
