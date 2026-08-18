@@ -1,20 +1,4 @@
-type Quiz = {
-
-  id: string;
-
-  title: string;
-
-  description: string;
-
-  category: string;
-
-  period: string;
-
-  difficulty: string;
-
-  quiz_type: string;
-
-};
+import type { Quiz } from "../lib/types";
 
 export function QuizCard({ quiz }: { quiz: Quiz }) {
 
