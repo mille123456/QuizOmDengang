@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
     "start": "next start"
   },
   "dependencies": {
     "@neondatabase/serverless": "latest",
+
+"@opennextjs/cloudflare": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
