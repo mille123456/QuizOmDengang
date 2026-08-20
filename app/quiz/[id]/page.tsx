@@ -2,17 +2,19 @@ import { demoQuizzes } from "@/lib/demo-data";
 
 import { QuizCard } from "@/components/QuizCard";
 
-export default function QuizPage({
+export default async function QuizPage({
 
   params,
 
 }: {
 
-  params: { id: string };
+  params: Promise<{ id: string }>;
 
 }) {
 
-  const quiz = demoQuizzes.find((q) => q.id === params.id);
+  const { id } = await params;
+
+  const quiz = demoQuizzes.find((q) => q.id === id);
 
   if (!quiz) {
 
@@ -33,16 +35,6 @@ export default function QuizPage({
   return (
 
     <main className="container section">
-
-      <div className="sectionHeader">
-
-        <span className="eyebrow">{quiz.category}</span>
-
-        <h1>{quiz.title}</h1>
-
-        <p>{quiz.description}</p>
-
-      </div>
 
       <QuizCard quiz={quiz} />
 
