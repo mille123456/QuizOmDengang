@@ -20,11 +20,15 @@ export type Quiz = {
 
   active: boolean;
 
-  featured_daily: boolean;
+featured_daily: boolean;
 
-  featured_weekly: boolean;
+featured_weekly: boolean;
 
-  created_at: string;
+is_daily?: boolean;
+
+is_weekly?: boolean;
+
+created_at: string;
 
   question_count?: number;
 
